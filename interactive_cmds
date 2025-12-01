@@ -1,0 +1,5 @@
+/cot   - Chain-of-thought reasoning
+/few   - Few-shot with examples
+/role  - Role-based prompting
+/emotion - Motivation prompts
+demo [query] - Compare all techniques

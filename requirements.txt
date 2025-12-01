@@ -1,0 +1,9 @@
+# Core dependencies
+google-genai>=0.2.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Optional: For LangChain integration
+# Uncomment if you want to use langchain_agent.py
+langchain>=0.1.0
+langchain-google-genai>=0.0.6
