@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 Prompt Engineering Lab
+# Prompt Engineering Lab
 
 ### *Master the Art of Talking to AI*
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 🎯 What is This?
+##  What is This?
 
 Ever wondered why some people get amazing results from ChatGPT while others struggle? It's all about **how you ask**.
 
@@ -31,7 +31,7 @@ Agent: Let me break this down step-by-step...
        3. Answer: 36
 ```
 
-### 💡 Why This Matters
+###  Why This Matters
 
 - **For Data Scientists**: Build better AI applications
 - **For ML Engineers**: Understand LLM behavior deeply  
@@ -40,7 +40,7 @@ Agent: Let me break this down step-by-step...
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 <table>
 <tr>
@@ -52,7 +52,7 @@ Research-backed strategies from papers published by Google, OpenAI, and leading 
 </td>
 <td width="50%">
 
-### ⚡ **Interactive Testing**
+###  **Interactive Testing**
 Switch techniques with `/cot`, `/few`, `/role` and see instant differences in outputs.
 
 </td>
@@ -60,7 +60,7 @@ Switch techniques with `/cot`, `/few`, `/role` and see instant differences in ou
 <tr>
 <td width="50%">
 
-### 🔍 **Side-by-Side Comparison**
+###  **Side-by-Side Comparison**
 Use `demo` to run identical queries through multiple techniques simultaneously.
 
 </td>
@@ -75,7 +75,7 @@ Test prompting on real-time information retrieval tasks.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ You: /cot What is 25% of 80?
 ## 🎓 Prompting Techniques
 
 <details>
-<summary><b>1️⃣ Zero-Shot Prompting</b> - Direct instructions, no examples needed</summary>
+<summary><b>1- Zero-Shot Prompting</b> - Direct instructions, no examples needed</summary>
 
 <br>
 
@@ -146,7 +146,7 @@ Translate "Hello" to Spanish.
 </details>
 
 <details>
-<summary><b>2️⃣ Few-Shot Prompting</b> - Learn from 2-5 examples</summary>
+<summary><b>2- Few-Shot Prompting</b> - Learn from 2-5 examples</summary>
 
 <br>
 
@@ -167,7 +167,7 @@ Now convert: Happy → ?
 </details>
 
 <details>
-<summary><b>3️⃣ Chain-of-Thought (CoT)</b> - Step-by-step reasoning</summary>
+<summary><b>3- Chain-of-Thought (CoT)</b> - Step-by-step reasoning</summary>
 
 <br>
 
@@ -189,7 +189,7 @@ Step-by-step:
 </details>
 
 <details>
-<summary><b>4️⃣ Role-Based Prompting</b> - Assign expertise to the model</summary>
+<summary><b>4- Role-Based Prompting</b> - Assign expertise to the model</summary>
 
 <br>
 
@@ -207,7 +207,7 @@ Explain microservices to a junior developer.
 </details>
 
 <details>
-<summary><b>5️⃣ Structured Output</b> - Request specific formats</summary>
+<summary><b>5- Structured Output</b> - Request specific formats</summary>
 
 <br>
 
@@ -230,7 +230,7 @@ List 3 benefits of exercise as JSON:
 </details>
 
 <details>
-<summary><b>6️⃣ Self-Consistency</b> - Multiple reasoning paths</summary>
+<summary><b>6- Self-Consistency</b> - Multiple reasoning paths</summary>
 
 <br>
 
@@ -243,7 +243,7 @@ Generates 3-5 different solution approaches, then selects the most consistent an
 </details>
 
 <details>
-<summary><b>7️⃣ Emotion Prompting</b> - Add stakes for better responses</summary>
+<summary><b>7- Emotion Prompting</b> - Add stakes for better responses</summary>
 
 <br>
 
@@ -261,7 +261,7 @@ Please analyze thoroughly for potential bugs.
 </details>
 
 <details>
-<summary><b>8️⃣ Context Enrichment</b> - Provide background information</summary>
+<summary><b>8- Context Enrichment</b> - Provide background information</summary>
 
 <br>
 
@@ -275,7 +275,7 @@ Question: What does my_list[0] return?
 </details>
 
 <details>
-<summary><b>9️⃣ Meta Prompting</b> - Let AI design the prompt</summary>
+<summary><b>9- Meta Prompting</b> - Let AI design the prompt</summary>
 
 <br>
 
@@ -289,7 +289,7 @@ that considers context, tone, and intent.
 </details>
 
 <details>
-<summary><b>🔟 Instruction Breakdown</b> - Clear steps + constraints</summary>
+<summary><b>10- Instruction Breakdown</b> - Clear steps + constraints</summary>
 
 <br>
 
@@ -359,29 +359,9 @@ You: /cot If a car travels 60 mph for 2.5 hours, how far does it go?
 ```bash
 You: search quantum computing breakthroughs 2024
 ```
-
 ---
 
-## 📂 Project Structure
-
-```
-Prompt_Engineering_Agent/
-│
-├── 🤖 agent.py                  # Core agent with technique implementations
-├── 🎮 main.py                   # Interactive CLI interface
-├── 🔧 tools.py                  # Web search and utilities
-├── 📚 prompt_techniques.py      # Library of 10 techniques
-│
-├── 🔗 langchain_agent.py        # LangChain integration (optional)
-├── 📦 requirements.txt          # Dependencies
-├── 🔐 .env                      # Your API keys (create this)
-│
-└── 📖 README.md                 # You are here
-```
-
----
-
-## 🎓 Learning Resources
+##  Learning Resources
 
 ### 📄 Research Papers
 
@@ -491,10 +471,10 @@ Task: {task}
 
 We love contributions! Here's how you can help:
 
-- 🐛 **Report bugs** via [Issues](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/issues)
-- 💡 **Suggest features** in [Discussions](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/discussions)
-- 🔧 **Submit PRs** for improvements
-- 📚 **Share use cases** you've built
+-  **Report bugs** via [Issues](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/issues)
+-  **Suggest features** in [Discussions](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/discussions)
+-  **Submit PRs** for improvements
+-  **Share use cases** you've built
 - ⭐ **Star the repo** if you find it useful!
 
 ---
@@ -502,17 +482,17 @@ We love contributions! Here's how you can help:
 ## 🛠️ Troubleshooting
 
 <details>
-<summary><b>❌ API Rate Limits (429 Error)</b></summary>
+<summary><b> API Rate Limits (429 Error)</b></summary>
 
 **Solutions:**
-- Switch to `gemini-1.5-flash` (better free tier)
+- Switch to `gemini-2.5-flash` (better free tier)
 - Wait 60 seconds between requests
 - Upgrade to paid tier
 
 </details>
 
 <details>
-<summary><b>❌ Import Errors</b></summary>
+<summary><b> Import Errors</b></summary>
 
 **Solutions:**
 - Verify all files are in same directory
@@ -522,7 +502,7 @@ We love contributions! Here's how you can help:
 </details>
 
 <details>
-<summary><b>❌ API Key Issues</b></summary>
+<summary><b> API Key Issues</b></summary>
 
 **Solutions:**
 - Confirm `.env` file exists in root
@@ -564,7 +544,7 @@ We love contributions! Here's how you can help:
 
 ---
 
-## 📜 Citation
+##  Citation
 
 ```bibtex
 @software{prompt_engineering_lab,
