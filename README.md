@@ -1,140 +1,157 @@
-# Prompt Engineering Lab
+<div align="center">
 
-An interactive learning environment for understanding and practicing prompt engineering techniques with Large Language Models (LLMs). Built with Google Gemini API, this project provides hands-on experience with 10 core prompting strategies used in production AI systems.
+# 🧠 Prompt Engineering Lab
 
-## Table of Contents
+### *Master the Art of Talking to AI*
 
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Prompting Techniques](#prompting-techniques)
-- [Usage Examples](#usage-examples)
-- [Learning Resources](#learning-resources)
-- [Advanced Usage](#advanced-usage)
-- [Contributing](#contributing)
-- [License](#license)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini%20API-4285F4?logo=google)](https://ai.google.dev/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
----
+**An interactive learning environment for understanding and practicing prompt engineering techniques with Large Language Models.**
 
-## Overview
+[Getting Started](#-quick-start) • [Techniques](#-prompting-techniques) • [Examples](#-usage-examples) • [Resources](#-learning-resources)
 
-Prompt engineering is the practice of designing inputs to guide LLM behavior and improve output quality. This project goes beyond theoretical explanations by providing an interactive environment where you can:
-
-- Test different prompting techniques side-by-side
-- Understand when and why to use each approach
-- Build intuition through immediate feedback
-- Apply patterns to real-world problems
-
-**Who is this for?**
-- Data scientists working with LLMs
-- ML engineers building AI applications
-- Students learning about generative AI
-- Anyone wanting to improve their prompting skills
+</div>
 
 ---
 
-## Key Features
+## 🎯 What is This?
 
-### 10 Prompt Engineering Techniques
-Implementations of research-backed prompting strategies including zero-shot, few-shot, chain-of-thought, role-based prompting, and more.
+Ever wondered why some people get amazing results from ChatGPT while others struggle? It's all about **how you ask**.
 
-### Interactive Testing
-Switch between techniques using simple commands (`/cot`, `/few`, `/role`) and see immediate differences in outputs.
+This project is your hands-on playground for mastering **10 research-backed prompt engineering techniques** that professionals use to build production AI systems. No fluff, just practical learning.
 
-### Comparison Mode
-Use the `demo` command to run the same query through multiple techniques simultaneously, making differences explicit.
+```bash
+You: /cot What is 15% of 240?
+Agent: Let me break this down step-by-step...
+       1. Convert percentage to decimal: 15% = 0.15
+       2. Multiply: 240 × 0.15 = 36
+       3. Answer: 36
+```
 
-### Web Search Integration
-Built-in search functionality to test prompting techniques on current information retrieval tasks.
+### 💡 Why This Matters
 
-### Production-Ready Patterns
-Code structure follows best practices for building LLM applications, making it easy to adapt for real projects.
+- **For Data Scientists**: Build better AI applications
+- **For ML Engineers**: Understand LLM behavior deeply  
+- **For Students**: Learn by doing, not just reading
+- **For Everyone**: Get 10x better results from AI tools
 
 ---
 
-## Installation
+## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔬 **10 Proven Techniques**
+Research-backed strategies from papers published by Google, OpenAI, and leading AI labs.
+
+</td>
+<td width="50%">
+
+### ⚡ **Interactive Testing**
+Switch techniques with `/cot`, `/few`, `/role` and see instant differences in outputs.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔍 **Side-by-Side Comparison**
+Use `demo` to run identical queries through multiple techniques simultaneously.
+
+</td>
+<td width="50%">
+
+### 🌐 **Web Search Integration**
+Test prompting on real-time information retrieval tasks.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
-- Serper API key for web search ([Get one here](https://serper.dev/))
 
-### Setup
-
-1. **Clone the repository**
 ```bash
+# You'll need:
+✓ Python 3.8+
+✓ Google Gemini API key (free tier available)
+✓ Serper API key for web search (optional)
+```
+
+### Installation
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent
-
 cd Prompt_Engineering_Agent
-```
 
-2. **Create virtual environment**
-```bash
+# 2. Set up environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-3. **Install dependencies**
-```bash
+# 3. Install dependencies
 pip install -r requirements.txt
+
+# 4. Add your API keys to .env
+echo "Gemini_api_key=your_key_here" > .env
+echo "Serper_api_key=your_serper_key" >> .env
 ```
 
-4. **Configure API keys**
-
-Create a `.env` file in the project root:
-```bash
-Gemini_api_key=your_gemini_api_key_here
-Serper_api_key=your_serper_api_key_here
-```
-
----
-
-## Quick Start
+### First Run
 
 ```bash
 python main.py
 ```
 
-### Basic Commands
-
 ```
-You: What is machine learning?
-Agent: [Responds using zero-shot prompting]
+🤖 GEMINI PROMPT ENGINEERING AGENT
+═══════════════════════════════════════════════════════════
 
-You: /cot What is 15% of 240?
-Agent: [Uses chain-of-thought reasoning]
-
-You: demo What causes rain?
-Agent: [Compares multiple techniques]
-
-You: search latest AI news
-Agent: [Searches web and summarizes results]
-
-You: help
-Agent: [Shows all available commands]
+Available Commands:
+  /cot    - Chain-of-thought reasoning
+  /few    - Few-shot with examples
+  /role   - Role-based prompting
+  demo    - Compare techniques side-by-side
+  
+You: /cot What is 25% of 80?
 ```
 
 ---
 
-## Prompting Techniques
+## 🎓 Prompting Techniques
 
-### 1. Zero-Shot Prompting
-**Description:** Direct instruction without examples.  
-**Best for:** Simple, well-understood tasks.  
-**Example:**
+<details>
+<summary><b>1️⃣ Zero-Shot Prompting</b> - Direct instructions, no examples needed</summary>
+
+<br>
+
+**When to use:** Simple, well-understood tasks
+
 ```
 Translate "Hello" to Spanish.
 ```
 
-**Research basis:** Models pre-trained on large corpora can perform many tasks without task-specific training.
+**Why it works:** Pre-trained models can handle many tasks without examples due to their vast training data.
 
----
+**Command:** Just type naturally
 
-### 2. Few-Shot Prompting
-**Description:** Provide 2-5 examples demonstrating the desired input-output pattern.  
-**Best for:** Tasks requiring specific format, style, or pattern recognition.  
-**Example:**
+</details>
+
+<details>
+<summary><b>2️⃣ Few-Shot Prompting</b> - Learn from 2-5 examples</summary>
+
+<br>
+
+**When to use:** Tasks requiring specific format or pattern
+
 ```
 Convert adjectives to adverbs:
 - Quick → Quickly
@@ -143,52 +160,61 @@ Convert adjectives to adverbs:
 Now convert: Happy → ?
 ```
 
-**Research basis:** Demonstrated in GPT-3 paper (Brown et al., 2020) to dramatically improve task performance without fine-tuning.
+**Research:** GPT-3 paper (Brown et al., 2020) showed dramatic improvements with just a few examples.
 
 **Command:** `/few [your query]`
 
----
+</details>
 
-### 3. Chain-of-Thought (CoT)
-**Description:** Prompt the model to articulate its reasoning process step-by-step.  
-**Best for:** Math problems, logic puzzles, complex reasoning tasks.  
-**Example:**
+<details>
+<summary><b>3️⃣ Chain-of-Thought (CoT)</b> - Step-by-step reasoning</summary>
+
+<br>
+
+**When to use:** Math, logic puzzles, complex reasoning
+
 ```
-Problem: A store has 50 apples. They sell 60% of them. How many remain?
+Problem: Store has 50 apples, sells 60%. How many remain?
 
-Let's solve this step-by-step:
+Step-by-step:
 1. Calculate 60% of 50: 0.60 × 50 = 30 apples sold
 2. Subtract from original: 50 - 30 = 20 apples
 3. Answer: 20 apples remain
 ```
 
-**Research basis:** "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (Wei et al., 2022) showed dramatic accuracy improvements on reasoning tasks.
+**Research:** Wei et al. (2022) demonstrated 3x accuracy improvement on reasoning tasks.
 
 **Command:** `/cot [your query]`
 
----
+</details>
 
-### 4. Role-Based Prompting
-**Description:** Assign a specific expertise, persona, or perspective to the model.  
-**Best for:** Domain-specific tasks, creative writing, specialized explanations.  
-**Example:**
+<details>
+<summary><b>4️⃣ Role-Based Prompting</b> - Assign expertise to the model</summary>
+
+<br>
+
+**When to use:** Domain-specific tasks, specialized explanations
+
 ```
 You are an experienced software architect.
-Explain microservices architecture to a junior developer.
+Explain microservices to a junior developer.
 ```
 
-**Why it works:** Guides the model's tone, depth, and terminology by activating relevant training data patterns.
+**Why it works:** Activates specific training data patterns matching the assigned role.
 
 **Command:** `/role [your query]`
 
----
+</details>
 
-### 5. Structured Output
-**Description:** Explicitly request specific formatting (JSON, tables, bullet points, etc.).  
-**Best for:** Data extraction, API integrations, consistent formatting needs.  
-**Example:**
+<details>
+<summary><b>5️⃣ Structured Output</b> - Request specific formats</summary>
+
+<br>
+
+**When to use:** Data extraction, API integration, consistent formatting
+
 ```
-List three benefits of exercise in this format:
+List 3 benefits of exercise as JSON:
 {
   "benefits": [
     {"name": "...", "description": "..."},
@@ -197,207 +223,221 @@ List three benefits of exercise in this format:
 }
 ```
 
-**Production value:** Essential for integrating LLM outputs into downstream systems.
+**Production value:** Essential for programmatic use of LLM outputs.
 
 **Command:** `/structured [your query]`
 
----
+</details>
 
-### 6. Self-Consistency
-**Description:** Generate multiple reasoning paths and select the most consistent answer.  
-**Best for:** Problems where multiple solution approaches exist.  
-**Implementation:** Model generates 3-5 solutions using different reasoning strategies, then identifies consensus.
+<details>
+<summary><b>6️⃣ Self-Consistency</b> - Multiple reasoning paths</summary>
 
-**Research basis:** "Self-Consistency Improves Chain of Thought Reasoning" (Wang et al., 2022) showed significant accuracy gains.
+<br>
 
----
+**When to use:** High-stakes decisions, uncertain problems
 
-### 7. Emotion/Motivation Prompting
-**Description:** Add emotional context or stakes to encourage careful responses.  
-**Best for:** Tasks requiring attention to detail or thoroughness.  
-**Example:**
+Generates 3-5 different solution approaches, then selects the most consistent answer.
+
+**Research:** Wang et al. (2022) showed significant accuracy gains on complex reasoning.
+
+</details>
+
+<details>
+<summary><b>7️⃣ Emotion Prompting</b> - Add stakes for better responses</summary>
+
+<br>
+
+**When to use:** Tasks requiring careful attention
+
 ```
-This code review is critical for production deployment.
-Please analyze this function carefully for potential bugs.
+This code review is critical for production.
+Please analyze thoroughly for potential bugs.
 ```
 
-**Research basis:** Recent studies show emotionally-loaded prompts can improve response quality and reduce errors.
+**Research:** Recent studies show emotional context improves response quality.
 
 **Command:** `/emotion [your query]`
 
----
+</details>
 
-### 8. Context Enrichment
-**Description:** Provide relevant background information before the main task.  
-**Best for:** Domain-specific questions, scenarios requiring specialized knowledge.  
-**Example:**
+<details>
+<summary><b>8️⃣ Context Enrichment</b> - Provide background information</summary>
+
+<br>
+
+**When to use:** Domain-specific questions
+
 ```
-Context: Python lists are mutable and use zero-based indexing.
-The append() method adds elements to the end.
-
-Question: What happens when you call my_list.append(5)?
+Context: Python lists use zero-based indexing.
+Question: What does my_list[0] return?
 ```
 
----
+</details>
 
-### 9. Meta Prompting
-**Description:** Ask the model to design or optimize the prompt structure itself.  
-**Best for:** Complex tasks where optimal prompting strategy is unclear.  
-**Example:**
+<details>
+<summary><b>9️⃣ Meta Prompting</b> - Let AI design the prompt</summary>
+
+<br>
+
+**When to use:** Complex tasks with unclear optimal strategy
+
 ```
-Design an optimal prompt for analyzing customer feedback sentiment
+Design an optimal prompt for analyzing customer feedback
 that considers context, tone, and intent.
 ```
 
----
+</details>
 
-### 10. Instruction Breakdown
-**Description:** Decompose complex tasks into clear steps with explicit constraints.  
-**Best for:** Multi-step processes, tasks with multiple requirements.  
-**Example:**
+<details>
+<summary><b>🔟 Instruction Breakdown</b> - Clear steps + constraints</summary>
+
+<br>
+
+**When to use:** Multi-step processes
+
 ```
-Task: Create a product description
+Task: Write a product description
 
 Constraints:
-- Maximum 100 words
-- Include 3 key features
-- Target audience: software developers
+- Max 100 words
+- Include 3 features
+- Target: developers
 
 Steps:
-1. Write attention-grabbing opening
-2. List three technical features with benefits
-3. End with clear call-to-action
+1. Catchy opening
+2. List features
+3. Call-to-action
 ```
+
+</details>
 
 ---
 
-## Usage Examples
+## 💻 Usage Examples
 
-### Example 1: Comparing Techniques
+### Example 1: Compare Techniques
 
-```python
-# Test the same query with different techniques
-python main.py
-
+```bash
 You: demo What is recursion in programming?
-
-# Output shows responses using:
-# - Zero-shot (direct answer)
-# - Chain-of-thought (step-by-step explanation)
-# - Role-based (as a CS professor)
-# - Emotion prompt (with careful attention)
 ```
 
-### Example 2: Web Search with Structured Output
+<details>
+<summary>See Output</summary>
 
-```python
-You: search quantum computing breakthroughs 2024
+```
+══════════════════════════════════════════════════════════
+Testing Query: What is recursion in programming?
+══════════════════════════════════════════════════════════
 
-# Agent uses structured output prompting to format:
-# - Key findings as bullet points
-# - 2-3 sentence summary
-# - Source citations
+--- Using Zero-Shot Technique ---
+Response: Recursion is when a function calls itself...
+
+--- Using Chain of Thought Technique ---
+Response: Let me explain step-by-step:
+1. First, understand what a function is...
+2. Now, imagine a function calling itself...
+3. This creates a loop that continues until...
+
+--- Using Role-Based Technique ---
+Response: As a computer science professor, I'd explain recursion
+as a fundamental programming concept where...
+
+--- Using Emotion Prompt Technique ---
+Response: [Careful, detailed explanation with examples]
 ```
 
-### Example 3: Chain-of-Thought for Math
+</details>
 
-```python
+### Example 2: Math with Chain-of-Thought
+
+```bash
 You: /cot If a car travels 60 mph for 2.5 hours, how far does it go?
+```
 
+### Example 3: Web Search with Structured Output
 
-
-### Core Components
-
-**agent.py**
-- `agent_reply()`: Main function handling user queries
-- `demonstrate_techniques()`: Comparison utility
-- Technique routing logic
-
-**prompt_techniques.py**
-- `PromptTechniques` class with static methods
-- Each method implements one prompting pattern
-- Reusable across different LLM providers
-
-**tools.py**
-- `google_search()`: Web search integration
-- Extensible for additional tools (calculator, database, etc.)
+```bash
+You: search quantum computing breakthroughs 2024
+```
 
 ---
 
-## Learning Resources
+## 📂 Project Structure
 
-### Research Papers
-
-1. **Few-Shot Learning**
-   - "Language Models are Few-Shot Learners" (Brown et al., 2020)
-   - [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)
-
-2. **Chain-of-Thought**
-   - "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (Wei et al., 2022)
-   - [arXiv:2201.11903](https://arxiv.org/abs/2201.11903)
-   
-
-3. **Self-Consistency**
-   - "Self-Consistency Improves Chain of Thought Reasoning" (Wang et al., 2022)
-   - [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)
-
-### Online Courses
-
-1. **DeepLearning.AI**
-   - ChatGPT Prompt Engineering for Developers (with Andrew Ng)
-   - [Course Link](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
-
-2. **Anthropic**
-   - Prompt Engineering Interactive Tutorial
-   - [Claude Prompt Engineering](https://docs.anthropic.com/claude/docs/prompt-engineering)
-
-3. **OpenAI**
-   - Prompt Engineering Guide
-   - [OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
-
-### Documentation & Guides
-
-- **Prompt Engineering Guide** (dair-ai): [https://www.promptingguide.ai/](https://www.promptingguide.ai/)
-- **LangChain Documentation**: [https://python.langchain.com/docs/](https://python.langchain.com/docs/)
-- **Learn Prompting**: [https://learnprompting.org/](https://learnprompting.org/)
-
-### Books
-
-1. **"The Prompt Engineer's Handbook"** - Draft available online
-2. **"Building LLM Applications"** - Practical patterns and architectures
+```
+Prompt_Engineering_Agent/
+│
+├── 🤖 agent.py                  # Core agent with technique implementations
+├── 🎮 main.py                   # Interactive CLI interface
+├── 🔧 tools.py                  # Web search and utilities
+├── 📚 prompt_techniques.py      # Library of 10 techniques
+│
+├── 🔗 langchain_agent.py        # LangChain integration (optional)
+├── 📦 requirements.txt          # Dependencies
+├── 🔐 .env                      # Your API keys (create this)
+│
+└── 📖 README.md                 # You are here
+```
 
 ---
 
-## Advanced Usage
+## 🎓 Learning Resources
 
-### Adapting to Other LLM Providers
+### 📄 Research Papers
 
-The codebase is designed to be provider-agnostic. To switch from Google Gemini to another provider:
+| Paper | Authors | Key Finding |
+|-------|---------|-------------|
+| [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | Brown et al., 2020 | Introduced few-shot learning with GPT-3 |
+| [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) | Wei et al., 2022 | Step-by-step reasoning improves accuracy |
+| [Self-Consistency](https://arxiv.org/abs/2203.11171) | Wang et al., 2022 | Multiple paths increase reliability |
 
-**OpenAI Example:**
+### 🎥 Free Courses
+
+- **[ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/)** by Andrew Ng
+- **[Anthropic's Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)**
+- **[OpenAI Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)**
+
+### 📚 Online Guides
+
+- **[Prompting Guide](https://www.promptingguide.ai/)** - Comprehensive reference
+- **[Learn Prompting](https://learnprompting.org/)** - Interactive tutorials
+- **[LangChain Docs](https://python.langchain.com/docs/)** - Advanced patterns
+
+---
+
+## 🔧 Advanced Usage
+
+### Adapt to Other LLMs
+
+<details>
+<summary><b>OpenAI GPT-4</b></summary>
+
 ```python
 from openai import OpenAI
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def agent_reply(user_prompt: str, technique: str = "zero_shot"):
-    # Apply technique to format prompt
+def agent_reply(user_prompt, technique="zero_shot"):
     final_prompt = apply_technique(user_prompt, technique)
     
     response = client.chat.completions.create(
-        model="gpt-4-mini-",
+        model="gpt-4",
         messages=[{"role": "user", "content": final_prompt}]
     )
     return response.choices[0].message.content
 ```
 
-**Anthropic Claude Example:**
+</details>
+
+<details>
+<summary><b>Anthropic Claude</b></summary>
+
 ```python
 from anthropic import Anthropic
 
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-def agent_reply(user_prompt: str, technique: str = "zero_shot"):
+def agent_reply(user_prompt, technique="zero_shot"):
     final_prompt = apply_technique(user_prompt, technique)
     
     response = client.messages.create(
@@ -408,187 +448,145 @@ def agent_reply(user_prompt: str, technique: str = "zero_shot"):
     return response.content[0].text
 ```
 
-### Integrating with LangChain
+</details>
 
-See `langchain_agent.py` for complete examples of:
-- PromptTemplate usage
-- Few-shot prompting with example selectors
-- Chain composition
-- Memory integration
-
-### Building Custom Techniques
-
-Add your own prompting techniques to `prompt_techniques.py`:
+### Build Your Own Technique
 
 ```python
+# In prompt_techniques.py
 @staticmethod
-def your_technique(task: str, custom_param: str) -> str:
-    """
-    Your Technique: Description of what it does
-    Best for: When to use this technique
-    """
-    return f"""[Your prompt template here]
+def your_custom_technique(task: str) -> str:
+    """Your innovative prompting approach"""
+    return f"""[Your creative prompt structure]
     
 Task: {task}
-Custom Parameter: {custom_param}
-
-Instructions:
 ..."""
 ```
 
-Then register it in `agent.py`:
+---
 
-```python
-elif technique == "your_technique":
-    final_prompt = pt.your_technique(user_prompt, param_value)
-```
+## 📊 Best Practices
+
+### Quick Reference Table
+
+| Technique | Best For | Avoid When | Speed |
+|-----------|----------|------------|-------|
+| Zero-shot | Simple tasks | Complex reasoning | ⚡⚡⚡ |
+| Few-shot | Format consistency | Limited examples | ⚡⚡ |
+| Chain-of-Thought | Math/Logic | Simple facts | ⚡ |
+| Role-based | Domain expertise | Generic queries | ⚡⚡ |
+| Structured | Data extraction | Creative tasks | ⚡⚡ |
+
+### Golden Rules
+
+1. **Be Specific** → Vague input = vague output
+2. **Show, Don't Tell** → Examples beat explanations
+3. **Test & Iterate** → First attempt rarely perfect
+4. **Consider Context** → Background info matters
+5. **Mind the Tokens** → Longer ≠ better
 
 ---
 
-## Best Practices
+## 🤝 Contributing
 
-### When to Use Each Technique
+We love contributions! Here's how you can help:
 
-| Technique | Use Case | Avoid When |
-|-----------|----------|------------|
-| Zero-shot | Simple, clear tasks | Complex reasoning needed |
-| Few-shot | Specific format required | Examples are ambiguous |
-| Chain-of-thought | Math, logic, reasoning | Simple factual queries |
-| Role-based | Domain expertise needed | Generic queries |
-| Structured | Data extraction, APIs | Creative/open-ended tasks |
-| Self-consistency | High-stakes decisions | Speed is critical |
-
-### Prompt Design Principles
-
-1. **Be Specific**: Vague prompts get vague responses
-2. **Provide Context**: Give the model necessary background
-3. **Show Examples**: When format matters, demonstrate it
-4. **Iterate**: Test and refine based on outputs
-5. **Consider Token Limits**: Balance detail with efficiency
-
-### Common Pitfalls
-
-- **Over-prompting**: Too many instructions can confuse the model
-- **Ambiguity**: Unclear requirements lead to inconsistent outputs
-- **Ignoring Context Windows**: Long prompts may be truncated
-- **Not Testing Variations**: First attempt rarely optimal
-- **Forgetting Edge Cases**: Test with diverse inputs
+- 🐛 **Report bugs** via [Issues](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/issues)
+- 💡 **Suggest features** in [Discussions](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/discussions)
+- 🔧 **Submit PRs** for improvements
+- 📚 **Share use cases** you've built
+- ⭐ **Star the repo** if you find it useful!
 
 ---
 
-## Contributing
+## 🛠️ Troubleshooting
 
-Contributions are welcome! Here's how you can help:
-
-### Types of Contributions
-
-- **New Techniques**: Implement additional prompting strategies
-- **Provider Support**: Add integrations for other LLM APIs
-- **Documentation**: Improve explanations or add examples
-- **Bug Fixes**: Report and fix issues
-- **Use Cases**: Share interesting applications
-
-### Contribution Process
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-technique`)
-3. Make your changes with clear commit messages
-4. Add tests if applicable
-5. Update documentation
-6. Submit a pull request
-
-### Guidelines
-
-- Follow existing code style and structure
-- Include docstrings for new functions
-- Add usage examples for new techniques
-- Update README if adding major features
-
----
-
-## Troubleshooting
-
-### API Rate Limits
-
-**Problem:** `429 RESOURCE_EXHAUSTED` error
+<details>
+<summary><b>❌ API Rate Limits (429 Error)</b></summary>
 
 **Solutions:**
-- Switch to `gemini-2.5-flash` (better free tier)
-- Add delay between requests
-- Upgrade to paid API tier
+- Switch to `gemini-1.5-flash` (better free tier)
+- Wait 60 seconds between requests
+- Upgrade to paid tier
 
-### Module Import Errors
+</details>
 
-**Problem:** `ImportError: cannot import name 'X'`
-
-**Solutions:**
-- Ensure all files are in the same directory
-- Check that `prompt_techniques.py` exists
-- Verify virtual environment is activated
-
-### API Key Issues
-
-**Problem:** Authentication failures
+<details>
+<summary><b>❌ Import Errors</b></summary>
 
 **Solutions:**
-- Verify `.env` file exists in project root
-- Check API key format (no quotes in `.env`)
-- Ensure key has necessary permissions
+- Verify all files are in same directory
+- Check `prompt_techniques.py` exists
+- Ensure virtual environment is activated
+
+</details>
+
+<details>
+<summary><b>❌ API Key Issues</b></summary>
+
+**Solutions:**
+- Confirm `.env` file exists in root
+- No quotes around keys in `.env`
 - Test key with simple API call
 
+</details>
+
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
-### Planned Features
-
-- [ ] Evaluation metrics for comparing techniques
-- [ ] Prompt version control and A/B testing
-- [ ] Multi-modal prompting examples (text + images)
-- [ ] RAG (Retrieval-Augmented Generation) integration
+### Coming Soon
+- [ ] Evaluation metrics for technique comparison
+- [ ] Prompt A/B testing framework
+- [ ] Multi-modal prompting (text + images)
+- [ ] RAG integration examples
 - [ ] Cost tracking per technique
-- [ ] GUI interface for non-technical users
-- [ ] Prompt templates library
-- [ ] Automated prompt optimization
+- [ ] Web UI for non-technical users
 
 ### Research Areas
-
-- Investigating newest prompting techniques from academic papers
-- Testing technique effectiveness across different model sizes
-- Building benchmark datasets for comparison
-- Exploring prompt injection security implications
+- Newest techniques from 2024-2025 papers
+- Cross-model effectiveness comparison
+- Prompt injection security testing
 
 ---
 
-## Citation
+## 📬 Get in Touch
 
-If you use this project in your research or work, please cite:
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-ChaymaeMoudnib-181717?logo=github)](https://github.com/ChaymaeMoudnib)
+[![Email](https://img.shields.io/badge/Email-chaymaemoudnibe@gmail.com-D14836?logo=gmail&logoColor=white)](mailto:chaymaemoudnibe@gmail.com)
+
+**Questions?** Open an [Issue](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/issues)  
+**Discussions?** Start a [Discussion](https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent/discussions)
+
+</div>
+
+---
+
+## 📜 Citation
 
 ```bibtex
 @software{prompt_engineering_lab,
   author = {Chaymae Moudnib},
   title = {Prompt Engineering Lab: Interactive Learning Environment for LLM Prompting},
-  year = {2025-2026},
+  year = {2024},
   url = {https://github.com/ChaymaeMoudnib/Prompt_Engineering_Agent}
 }
 ```
 
+---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- Research papers that formed the foundation of these techniques
-- Google Gemini team for API access
-- Open source community for inspiration and tools
-- Future Contributors who will improve this project and add their touches
+Built with insights from groundbreaking research by Google, OpenAI, Anthropic, and the broader AI community. Special thanks to future contributors who will help this project grow.
 
 ---
 
-## Contact
+<div align="center">
 
-- **GitHub Issues**: @chaymaemoudnib
-- **Discussions**: @chaymaemoudnib
-- **Email**: chaymaemoudnibe@gmail.com (for direct inquiries)
+### ⭐ Star this repo if it helped you master prompt engineering!
 
----
+**Made with 💙 for the AI learning community**
 
-**Built with the goal of making prompt engineering accessible, practical, and immediately useful for real-world applications.**
+</div>
